@@ -1,0 +1,141 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girl's Birthday Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #countdown {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Girl's Birthday Countdown</h1>
+    <div id="countdown"></div>
+
+    <script>
+        // Set the girl's birthday date (YYYY, MM-1, DD, HH, MM, SS)
+        const birthday = new Date(2023, 10, 20, 12, 0, 0); // July 20, 2023
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = birthday - now;
+
+            if (timeLeft <= 0) {
+                document.getElementById('countdown').innerHTML = 'Happy Birthday!';
+            } else {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `
+                    ${days}d ${hours}h ${minutes}m ${seconds}s
+                `;
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial call to set the countdown
+        updateCountdown();
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girl's Birthday Countdown</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f7e6ff;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ff80b3;
+            margin: 20px 0;
+        }
+
+        #countdown {
+            font-size: 48px;
+            color: #ff80b3;
+            margin-top: 20px;
+            animation: heartbeat 1s infinite alternate;
+        }
+
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Celebrating a Special Day!</h1>
+    <img src="girl_image.jpg" alt="Cute Girl" width="300" height="400">
+    <div id="countdown"></div>
+
+    <script>
+        // Set the girl's birthday date (YYYY, MM-1, DD, HH, MM, SS)
+        const birthday = new Date(2023, 10, 20, 0, 0, 0); // July 20, 2023
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = birthday - now;
+
+            if (timeLeft <= 0) {
+                document.getElementById('countdown').innerHTML = '🎉 Happy Birthday! 🎂';
+            } else {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `
+                    ${days}d ${hours}h ${minutes}m ${seconds}s
+                `;
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial call to set the countdown
+        updateCountdown();
+    </script>
+</body>
+</html>
